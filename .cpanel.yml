@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/madfariz/public_html/
-    - git push -u origin --all
+    - /bin cp * $DEPLOYPATH
