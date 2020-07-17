@@ -2,6 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/madfariz/public_html/
-    - rsync -az public/* $DEPLOYPATH --delete
-    - rm -rf public/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
     - git push -u origin --all
