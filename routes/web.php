@@ -27,6 +27,9 @@ Route::get('/services', 'ServicesController@index')
 
 Route::get('/portfolio', 'PortfolioController@index')
   ->name('portfolio');
+
+Route::get('/achievement', 'AchievementController@index')
+  ->name('achievement');
   
 Route::get('/detail/{slug}', 'DetailController@index')
   ->name('detail');
@@ -50,6 +53,7 @@ Route::prefix('admin')
 
       Route::resource('skill', 'SkillController');
       Route::resource('portfolio', 'PortfolioController');
+      Route::resource('achievement', 'AchievementController');
   });
 
 Auth::routes(['verify' => true, 'register' => false]);

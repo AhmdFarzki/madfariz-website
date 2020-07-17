@@ -34,6 +34,12 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Portfolio</span></a>
   </li>
+  <hr class="sidebar-divider">
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('achievement.index')}}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Achievement</span></a>
+  </li>
 
 
   <!-- Divider -->

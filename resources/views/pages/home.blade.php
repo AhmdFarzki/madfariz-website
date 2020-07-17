@@ -425,6 +425,86 @@
 </section>
 <!-- End Portfolio -->
 
+{{-- Achievement --}}
+<section id="work" class="work_experience_area pt-115">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-heading text-center mb-3">
+                    <h5>My Achievements</h5>
+                    <h1>Achievement and Graduation</h1>
+                </div>
+            </div>
+        </div>
+        <div class="work_experience">
+            @foreach($achiev as $ac)
+            @if ($ac->id%2 == 1)
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single_experience d-lg-flex align-items-center flex-wrap wow fadeIn"
+                        data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="experience_title order-last">
+                            <h3 class="title">{{ $ac->name }}</h3>
+                            <p>{{ $ac->organizer }}</p>
+                            <span class="date">{{ $ac->date_competition }}</span>
+                        </div>
+                        <div class="experience_number">
+                            <span>{{ $ac->id }}</span>
+                        </div>
+                        <div class="experience_content order-first">
+                            <div class="content">
+
+                                <div class="content-overlay"></div>
+                                <img src="{{ Storage::url($ac->photo) }} " class="img-fluid" alt="">
+                                <div class="content-details fadeIn-top">
+                                    <p>{{ $ac->description }}</p>
+                                    <a href="{{ $ac->link }}" target="_blank"><i class="fas fa-eye fa-2x"></i></a>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @else
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single_experience d-lg-flex align-items-center flex-wrap wow fadeIn"
+                        data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="experience_title text-lg-right">
+                            <h3 class="title">{{ $ac->name }}</h3>
+                            <p>{{ $ac->organizer }}</p>
+                            <span class="date">{{ $ac->date_competition }}</span>
+                        </div>
+                        <div class="experience_number">
+                            <span>{{ $ac->id }}</span>
+                        </div>
+                        <div class="experience_content">
+                            <div class="content">
+
+                                <div class="content-overlay"></div>
+                                <img src="{{ Storage::url($ac->photo) }} " class="img-fluid" alt="">
+                                <div class="content-details fadeIn-top">
+                                    <p>{{ $ac->description }}</p>
+                                    <a href="{{ $ac->link }}" target="_blank"><i class="fas fa-eye fa-2x"></i></a>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @endif
+
+
+
+            @endforeach
+        </div>
+    </div>
+</section>
+{{-- End Achievement --}}
+
 
 <!-- Hire -->
 <div class="container-fluid">

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Skill;
 use App\Models\Portfolio;
+use App\Models\Achievement;
 
 class DashboardController extends Controller
 {
@@ -21,7 +22,8 @@ class DashboardController extends Controller
         
         return view('pages.admin.dashboard',[
             'skills' => Skill::count(),
-            'portfolio' => Portfolio::count()
+            'portfolio' => Portfolio::count(),
+            'achievement' => Achievement::count()
         ]);
     }
 }

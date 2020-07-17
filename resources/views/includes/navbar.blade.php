@@ -29,6 +29,9 @@
                         <li class="nav-item {{ Request::is('portfolio') ? 'active' : '' }}">
                             <a class="nav-link-nav" href="{{ route('portfolio')}}">Portfolio</a>
                         </li>
+                        <li class="nav-item {{ Request::is('achievement') ? 'active' : '' }}">
+                            <a class="nav-link-nav" href="{{ route('achievement')}}">Achievement</a>
+                        </li>
                         <li class="nav-item {{ Request::is('contact') ? 'active' : '' }}">
                             <a class="nav-link-nav" href="{{ route('contact')}}">Contact</a>
                         </li>
