@@ -2,7 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/madfariz/public_html/
-    - ./bin/hugo --minify
     - rsync -az public/* $DEPLOYPATH --delete
     - rm -rf public/
     - git push -u origin --all
